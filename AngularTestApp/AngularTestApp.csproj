@@ -39,8 +39,26 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+
+
   <ItemGroup>
-    <Folder Include="ClientApp\dist\" />
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\main.js" />
+    <None Include="wwwroot\main.js.map" />
+    <None Include="wwwroot\polyfills.js" />
+    <None Include="wwwroot\polyfills.js.map" />
+    <None Include="wwwroot\runtime.js" />
+    <None Include="wwwroot\runtime.js.map" />
+    <None Include="wwwroot\styles.css" />
+    <None Include="wwwroot\styles.css.map" />
+    <None Include="wwwroot\vendor.js" />
+    <None Include="wwwroot\vendor.js.map" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

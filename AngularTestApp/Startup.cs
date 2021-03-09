@@ -27,7 +27,7 @@ namespace AngularTestApp
             services.AddIdentityServices(Configuration);
             services.AddSignalR();
 
-            // In production, the Angular files will be served from this directory
+            //In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "wwwroot";
@@ -54,6 +54,9 @@ namespace AngularTestApp
             }
 
             app.UseRouting();
+
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:4200"));
+
             app.UseAuthentication();
             app.UseAuthorization();
 
